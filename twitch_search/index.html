@@ -1,9 +1,42 @@
 <html>
 	<head>
 		<title>Twitch Stream Search</title>
+		<link rel="stylesheet" href="styling.css">
 	</head>
 	<body>
+		
 		<div class="container">
+			<h2>Twitch Stream Search</h2>
+			<div class="search bordered">
+				<input id="search-val" type="text" name="search-bar" placeholder="Search for stream" onkeypress="entered(event)">
+				<input id="search-bt" type="button" value="Search">
+			</div>
+			<div class="results bordered" id="no-results">
+				No results found. Please try a new search.
+			</div>
+			<div class="results bordered" id="found-results">
+				<div class="nav">
+					<br/><br/>
+					<div class="nav-content nav-left">
+						Total Results:&nbsp;<span id="result-num"></span>
+					</div>
+					<div class="nav-content nav-right">
+						<a id="prev" href="#">&#9664;</a>
+						<span class="unclickable" id="first">&#9664;</span>
+						&nbsp;&nbsp;
+						<span id="pgno"></span>
+						/
+						<span id="pages"></span>
+						&nbsp;&nbsp;
+						<span class="unclickable" id="last">&#9654;</span>
+						<a id="next" href="#">&#9654;</a>
+					</div>
+				</div>
+				<table id="content" cellpadding="20" cellspacing="0">
+					<tbody></tbody>
+				</table>
+				<script src="script.js"></script>
+			</div>
 		</div>
 	</body>
 </html>
