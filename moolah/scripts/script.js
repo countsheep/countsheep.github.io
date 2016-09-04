@@ -1,13 +1,13 @@
 var CommentBox = React.createClass({
   render: function() {
     return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
+      <div className="title ui center align container">
+        <h1>Hello, world! I am a CommentBox.</h1>
       </div>
     );
   }
 });
 ReactDOM.render(
-  <CommentBox />,
+  <Title />,
   document.getElementById('content')
 );
