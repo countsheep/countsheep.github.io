@@ -1,4 +1,4 @@
-var CommentBox = React.createClass({
+var Title = React.createClass({
   render: function() {
     return (
       <div className="title ui center align container">
