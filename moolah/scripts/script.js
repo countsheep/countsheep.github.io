@@ -1,23 +1,51 @@
 var Title = React.createClass({
-  render: function() {
-    return (
-      <div className="title ui center align container">
-        <h1 class="ui center align header">Euro Exchange</h1>
-      </div>
-    );
-  }
+  	render: function() {
+    	return (
+    		<div className="title ui center aligned container">
+        		<h1 class="ui center align header">Euro Exchange</h1>
+      		</div>
+    	);
+  	}
 });
-var Rate = React.createClass({
-  render: function() {
-    return(<div>
-    	<Title />
-    </div>
-    );
-    
-  }
+var CurrentRate = React.createClass({
+  	render: function() {
+    	return (
+    		<div>
+        		Exchange Rate is {this.props.data[0]}.
+      		</div>
+    	);
+  	}
+});
+
+var Exchange = React.createClass({
+	getInitialState: function() {
+    	return {data: []};
+  	},
+  	componentsDidMount: function(){
+  		$.ajax({
+  			url: "http://api.fixer.io/latest?base=USD",
+  			dataType: "json",
+  			success: function(data){
+  				this.setState({data: data.EUR});
+  			}.bind(this),
+  			error: function(xhr, status, err) {
+  				console.error(status, err.toString());
+  			}.bind(this)
+
+  		});
+  	},
+  	render: function(){
+  		return (
+  			<div>
+  				<Title />
+  				<
+  			</div>
+  		);
+  	}
+
 });
 
 ReactDOM.render(
-  <Rate />,
-  document.getElementById('content')
+  	<Exchange url="http://api.fixer.io/" />,
+  	document.getElementById('content')
 );
