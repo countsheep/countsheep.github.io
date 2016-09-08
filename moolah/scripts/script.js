@@ -11,7 +11,7 @@ var CurrentRate = React.createClass({
   	render: function() {
     	return (
     		<div>
-        		Exchange Rate is {this.props.data[0]}.
+        		Exchange Rate is {this.props.data}.
       		</div>
     	);
   	}
@@ -19,7 +19,7 @@ var CurrentRate = React.createClass({
 
 var Exchange = React.createClass({
 	getInitialState: function() {
-    	return {data: []};
+    	return {data: 0};
   	},
   	componentsDidMount: function(){
   		$.ajax({
