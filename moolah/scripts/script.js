@@ -2,12 +2,21 @@ var Title = React.createClass({
   render: function() {
     return (
       <div className="title ui center align container">
-        <h1 class="ui header">Hello, world! I am a CommentBox.</h1>
+        <h1 class="ui center align header">Euro Exchange</h1>
       </div>
     );
   }
 });
+var Rate = React.createClass({
+  render: function() {
+    <div>
+    	<Title />
+    </div>
+    
+  }
+});
+
 ReactDOM.render(
-  <Title />,
+  <Rate />,
   document.getElementById('content')
 );
