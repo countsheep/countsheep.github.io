@@ -9,9 +9,10 @@ var Title = React.createClass({
 });
 var Rate = React.createClass({
   render: function() {
-    <div>
+    return(<div>
     	<Title />
     </div>
+    );
     
   }
 });
