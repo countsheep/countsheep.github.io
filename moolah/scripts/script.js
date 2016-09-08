@@ -26,6 +26,7 @@ var Exchange = React.createClass({
   			url: "http://api.fixer.io/latest?base=USD",
   			dataType: "json",
   			success: function(data){
+  				console.log(data);
   				this.setState({data: data.EUR});
   			}.bind(this),
   			error: function(xhr, status, err) {
