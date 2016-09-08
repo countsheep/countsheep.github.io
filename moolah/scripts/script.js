@@ -38,7 +38,7 @@ var Exchange = React.createClass({
   		return (
   			<div>
   				<Title />
-  				<
+  				<CurrentRate data={this.state.data} />
   			</div>
   		);
   	}
