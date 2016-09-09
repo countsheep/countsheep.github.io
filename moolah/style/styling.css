@@ -1,3 +1,114 @@
+html, body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	min-width: 800px;
+}
+.wrapper {
+	flex: 1;
+}
+
+.site-footer{
+	text-align:center; 
+	height: 60px; 
+	flex: none;
+	color: #fff;
+	background-color: #FFB54F;
+	text-shadow: 1px 1px #F5A536;
+	padding: 1em 5em;
+}
+.site-footer>a{
+	color: #88F2DA;
+}
+
 .title{
-	padding: 5em 0em;
+	padding: 4em 0em 1em 0em;
+}
+
+.pad{
+    padding:20px;
+}
+
+.browser-legend{
+    font-size:14px;
+    opacity:.8;
+}
+
+.bottom-left-svg{
+    padding-top:40px;
+    text-align: center;
+}
+
+
+.bottom-right-svg{
+    text-align: center;
+}
+
+.line {
+    fill: none;
+    stroke: #88F2DA;
+    stroke-width: 5px;
+
+}
+
+.axis{
+    fill:#999;
+    opacity: 1;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #444;
+    shape-rendering: crispEdges;
+
+}
+
+.axis text {
+    font-size: 14px;
+}
+
+.y-grid .tick{
+    stroke: #444;
+    opacity: 1;
+}
+
+.default-svg{
+
+}
+
+.ui.segment, .ui.attached.segment{
+	border: none;
+}
+
+.ui.label.aqua{
+	color: #fff;
+	background-color: #88F2DA;
+	text-shadow: 1px 1px #4BC9AD;
+}
+.ui.label.mandarin{
+	color: #fff;
+	background-color: #FFB54F;
+	text-shadow: 1px 1px #F5A536;
+}
+#left-icon{
+	margin-right: 3.5px;
+}
+.placeHolder{
+	position: absolute;
+	text-align: center;
+	padding: calc(50% - 100px) 0px;
+	width: 200px;
+	left: calc(50% - 100px);
+}
+.spin{
+	animation: spin-rotate 2s linear infinite;
+
+}
+.spin>i{
+	margin: 0;
+}
+@keyframes spin-rotate {
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
 }
