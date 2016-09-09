@@ -533,13 +533,13 @@ var Exchange = React.createClass({
 	  					<Graph data={this.state.data} />
 	  				</div>
 	  				<div className="ui bottom attached tab segment" data-tab="second">
-	  					<Graph data={this.state.data} ticks={mTick} dataType="month" />
+	  					<Graph data={this.state.data} ticks={mTick} dataType="month" chartId="month" />
 	  				</div>
 	  				<div className="ui bottom attached tab segment" data-tab="third">
-	  					<Graph data={this.state.data} ticks={yTick} dataType="year" timeFormat="%b %Y"/>
+	  					<Graph data={this.state.data} ticks={yTick} dataType="year" chartId="year" timeFormat="%b %Y"/>
 	  				</div>
 	  				<div className="ui bottom attached tab segment" data-tab="fourth">
-	  					<Graph data={this.state.data} ticks={dTick} dataType="decade" timeFormat="%Y"/>
+	  					<Graph data={this.state.data} ticks={dTick} dataType="decade" chartId="decade" timeFormat="%Y"/>
 	  				</div>
 	  			</div>
 	  		</div>
